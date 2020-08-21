@@ -50,7 +50,7 @@ namespace re_platfrom_fapp_download_blob
                         message.Content.Headers.ContentType = new MediaTypeHeaderValue(block.Properties.ContentType);
                         message.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment")
                         {
-                            FileName = $"CopyOf_{block.Name}",
+                            FileName = block.Name,
                             Size = block.Properties.Length
                         };
                         return message;
